@@ -1,0 +1,35 @@
+{
+    "name": "my-mcp-server",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "module": "src/index.ts",
+    "bin": {
+        "mcp-server": "./build/index.js"
+    },
+    "scripts": {
+        "build": "npx smithery build",
+        "dev": "npx smithery dev",
+        "build:local": "tsc && chmod 755 build/index.js"
+    },
+    "files": [
+        "build"
+    ],
+    "keywords": [
+        "mcp",
+        "model-context-protocol",
+        "mcp-server"
+    ],
+    "author": "",
+    "license": "ISC",
+    "description": "MCP Server with time, greet, calculator, geocode, and weather tools",
+    "dependencies": {
+        "@modelcontextprotocol/sdk": "^1.24.3",
+        "zod": "^3.25.46"
+    },
+    "devDependencies": {
+        "@smithery/cli": "^1.4.6",
+        "@types/node": "^24.10.2",
+        "typescript": "^5.9.3"
+    }
+}
